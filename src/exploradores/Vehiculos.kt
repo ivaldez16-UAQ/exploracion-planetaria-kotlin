@@ -21,7 +21,7 @@ class DronExplorador(nombre: String) : Explorador(nombre, energiaInicial = 90), 
 class SubmarinoExplorador(nombre: String) : Explorador(nombre, energiaInicial = 80), Comunicable {
     override val consumoBase = 4
     override fun desplazarse(km: Double) {
-        println("$nombre se sumerge en el océano subterráneo")
+        println("$nombre se sumerge en el océano subterráneo ")
         super.desplazarse(km)
     }
     override fun explorar() = "$nombre toma muestras de agua a gran profundidad"

@@ -3,7 +3,7 @@ import exploradores.*
 import modelo.*
 
 fun main() {
-    println("=== MISIÓN EUROPA ===")
+    println("=== MISIÓN EUROPA === ")
     val rover = RoverTerrestre("Atlas")
     val dron = DronExplorador("Colibrí")
     val submarino = SubmarinoExplorador("Neptuno")

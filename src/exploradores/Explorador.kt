@@ -34,7 +34,7 @@ abstract class Explorador(val nombre: String, energiaInicial: Int = 100, distanc
         println("🔋 $nombre se recargó. Energía: ${energia.comoPorcentaje()}")
     }
 
-    fun alertaBateria() = println("⚠️ ALERTA: $nombre tiene la batería baja (${energia.comoPorcentaje()})")
+    fun alertaBateria() = println("⚠️ ALERTA : $nombre tiene la batería baja (${energia.comoPorcentaje()})")
 
     abstract fun explorar(): String
 }

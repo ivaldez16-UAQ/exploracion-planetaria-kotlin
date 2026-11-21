@@ -17,7 +17,7 @@ object CentroControl {
     }
 
     fun resumen() {
-        println("\n=== RESUMEN DE LA MISIÓN ===")
+        println("\n=== RESUMEN DE LA  MISIÓN ===")
         println("Entradas en bitácora: ${bitacora.size}")
         println("Descubrimientos totales: ${descubrimientos.size}")
         descubrimientos.forEach { println(" - ${it.nombre} (${it.zona})") }
