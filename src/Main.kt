@@ -3,17 +3,28 @@ import exploradores.*
 import modelo.*
 
 fun main() {
-    val rover = RoverTerrestre("Curiosity-X")
-    val dron = DronExplorador("Skyline-1")
+    println("=== MISIÓN EUROPA ===")
+    val rover = RoverTerrestre("Atlas")
+    val dron = DronExplorador("Colibrí")
+    val submarino = SubmarinoExplorador("Neptuno")
 
-    rover.desplazarse(10.0)
-    dron.desplazarse(15.0)
+    rover.desplazarse(8.0)
+    dron.desplazarse(12.0)
+    submarino.desplazarse(6.0)
+    rover.desplazarse(9.0)   // provoca la alerta de batería baja
+    rover.recargar(50)
+
     CentroControl.registrar(rover.explorar())
-    CentroControl.registrar(Descubrimiento("Cristal de hielo", TipoZona.ROCOSA, 8))
+    CentroControl.registrar(submarino.explorar())
 
-    rover.transmitir("Muestra recolectada")
+    val hallazgo = Descubrimiento("Hielo con minerales", TipoZona.ROCOSA, 7)
+    CentroControl.registrar(hallazgo)
+    CentroControl.registrar(hallazgo.copy(nombre = "Hielo con minerales (muestra 2)", zona = TipoZona.PELIGROSA))
+
+    rover.transmitir("Muestras recolectadas")
     dron.transmitir("Zona despejada")
+    submarino.transmitir("Detecto actividad térmica")
 
-    println("Exploradores creados: ${Explorador.contadorExploradores}")
+    println("\nExploradores creados: ${Explorador.contadorExploradores}")
     CentroControl.resumen()
 }
