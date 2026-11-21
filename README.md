@@ -37,7 +37,7 @@ src/
 La clase es el molde y el objeto es lo que se crea con él.
 
 **2. ¿val o var?**
-`val` no se reasigna y `var` sí.
+`val` no se reasigna y `var` sí por su definición.
 
 **3. ¿Para qué sirven los parámetros predeterminados?**
 Para no escribir varios constructores.
